@@ -1,0 +1,16 @@
+{
+  "name": "advent-of-code-25",
+  "version": "1.0.0",
+  "description": "Advent of Code 2025 solutions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Trey Roche",
+  "dependencies": {
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1"
+  }
+}
