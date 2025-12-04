@@ -36,7 +36,6 @@ const removeAccessibleRolls = (rows) => {
     }
     outRows.push(outRow);
   }
-  console.log("removed ", accessibleRolls, "rolls");
   return [outRows, accessibleRolls];
 };
 
@@ -79,12 +78,9 @@ fs.readFile(path.resolve(__dirname, "input.txt"), "utf8", (_, input) => {
   let exit = false;
   while (!exit) {
     const oldTotal = partTwoRemoved;
-    console.log(oldTotal, partTwoRemoved);
-
     [wallState, rollsRemoved] = removeAccessibleRolls(wallState);
-    console.log(oldTotal, rollsRemoved);
     partTwoRemoved += rollsRemoved;
     exit = oldTotal === partTwoRemoved + rollsRemoved;
   }
-  console.log(partTwoRemoved);
+  console.log("part two:", partTwoRemoved);
 });
